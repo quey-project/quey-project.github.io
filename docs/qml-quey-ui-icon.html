@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Icon.qml -->
+  <title>Icon QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">Icon QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$Icon-brief -->
+<p>Provides an icon <a href="#details">More...</a></p>
+<!-- @@@Icon -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html">Item</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-icon-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-icon.html#color-prop">color</a></b></b> : color</li>
+<li class="fn"><b><b><a href="qml-quey-ui-icon.html#iconDirectory-prop">iconDirectory</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-quey-ui-icon.html#name-prop">name</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-quey-ui-icon.html#size-prop">size</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-quey-ui-icon.html#source-prop">source</a></b></b> : url</li>
+</ul>
+<!-- $$$Icon-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>Quey UI provides the <a href="http://ionicons.com/">Ionicons</a> icon set but with renamed icon names. Look <a href="https://github.com/tim-sueberkrueb/ionicons-svg">here</a> for the icon names.</p>
+<pre class="qml">import QtQuick 2.4
+import quey.ui 0.1
+import Qt.labs.folderlistmodel 2.1
+
+<span class="type"><a href="qml-quey-ui-applicationview.html">ApplicationView</a></span> {
+    <span class="name">width</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">640</span>)
+    <span class="name">height</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">480</span>)
+
+    <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-flickable.html">Flickable</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">contentHeight</span>: <span class="name">flow</span>.<span class="name">childrenRect</span>.<span class="name">height</span>
+
+        <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-flow.html">Flow</a></span> {
+            <span class="name">id</span>: <span class="name">flow</span>
+            <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>
+
+            <span class="type"><a href="qml-quey-ui-icon.html">Icon</a></span> { <span class="name">id</span>: <span class="name">icon</span> }
+
+            <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-repeater.html">Repeater</a></span> {
+                <span class="name">model</span>: <span class="name">FolderListModel</span> {
+                    <span class="name">id</span>: <span class="name">folderModel</span>
+                    <span class="name">folder</span>: <span class="name">icon</span>.<span class="name">iconDirectory</span>
+                    <span class="name">nameFilters</span>: [<span class="string">&quot;*.svg&quot;</span>]
+                }
+
+                <span class="name">delegate</span>: <span class="name">Icon</span> {
+                    <span class="name">source</span>: <span class="name">Qt</span>.<span class="name">resolvedUrl</span>(<span class="string">&quot;file://&quot;</span><span class="operator">+</span><span class="name">filePath</span>)
+                    <span class="name">Component</span>.onCompleted: <span class="name">console</span>.<span class="name">log</span>(<span class="name">filePath</span>)
+                }
+            }
+        }
+    }
+}</pre>
+<!-- @@@Icon -->
+<h2>Property Documentation</h2>
+<!-- $$$color -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="color-prop"><td class="tblQmlPropNode"><p><a name="color-prop"></a><span class="name">color</span> : <span class="type">color</span></p></td></tr></table></div></div><div class="qmldoc"><p>The icon color.</p>
+</div></div><!-- @@@color -->
+<br/>
+<!-- $$$iconDirectory -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="iconDirectory-prop"><td class="tblQmlPropNode"><p><a name="iconDirectory-prop"></a><span class="name">iconDirectory</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@iconDirectory -->
+<br/>
+<!-- $$$name -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="name-prop"><td class="tblQmlPropNode"><p><a name="name-prop"></a><span class="name">name</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>The icon name. This will pick the icon with the given name from the installed icon set.</p>
+</div></div><!-- @@@name -->
+<br/>
+<!-- $$$size -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="size-prop"><td class="tblQmlPropNode"><p><a name="size-prop"></a><span class="name">size</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"><p>The icon size. This is equal to width and height of the icon.</p>
+</div></div><!-- @@@size -->
+<br/>
+<!-- $$$source -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="source-prop"><td class="tblQmlPropNode"><p><a name="source-prop"></a><span class="name">source</span> : <span class="type">url</span></p></td></tr></table></div></div><div class="qmldoc"><p>The icon source. Can be used instead of /l name.</p>
+</div></div><!-- @@@source -->
+<br/>
+</body>
+</html>

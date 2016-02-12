@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ActionBar.qml -->
+  <title>ActionBar QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">ActionBar QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$ActionBar-brief -->
+<p>Displays a menu and an action row. Provides the base of <a href="qml-quey-ui-pageheadview.html">PageHeadView</a> <a href="#details">More...</a></p>
+<!-- @@@ActionBar -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html">Item</a></p>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qml-quey-ui-pageheadview.html">PageHeadView</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-actionbar-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-actionbar.html#actions-prop">actions</a></b></b> : Action</li>
+<li class="fn"><b><b><a href="qml-quey-ui-actionbar.html#hasMenu-prop">hasMenu</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-quey-ui-actionbar.html#iconColor-prop">iconColor</a></b></b> : color</li>
+<li class="fn"><b><b><a href="qml-quey-ui-actionbar.html#isSubPage-prop">isSubPage</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-quey-ui-actionbar.html#menu-prop">menu</a></b></b> : Menu</li>
+<li class="fn"><b><b><a href="qml-quey-ui-actionbar.html#title-prop">title</a></b></b> : string</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-actionbar.html#backClicked-signal">backClicked</a></b></b>()</li>
+</ul>
+<!-- $$$ActionBar-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<!-- @@@ActionBar -->
+<h2>Property Documentation</h2>
+<!-- $$$actions -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="actions-prop"><td class="tblQmlPropNode"><p><a name="actions-prop"></a><span class="name">actions</span> : <span class="type"><a href="qml-quey-ui-action.html">Action</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>A list of actions. Refer to <a href="qml-quey-ui-action.html">Action</a> for more information.</p>
+</div></div><!-- @@@actions -->
+<br/>
+<!-- $$$hasMenu -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hasMenu-prop"><td class="tblQmlPropNode"><p><a name="hasMenu-prop"></a><span class="qmlreadonly">read-only</span><span class="name">hasMenu</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property is true if <a href="qml-quey-ui-actionbar.html#menu-prop">menu</a> is valid.</p>
+</div></div><!-- @@@hasMenu -->
+<br/>
+<!-- $$$iconColor -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="iconColor-prop"><td class="tblQmlPropNode"><p><a name="iconColor-prop"></a><span class="name">iconColor</span> : <span class="type">color</span></p></td></tr></table></div></div><div class="qmldoc"><p>Sets the icon color. Defaults to <code>Style.palette.regular</code>.</p>
+</div></div><!-- @@@iconColor -->
+<br/>
+<!-- $$$isSubPage -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="isSubPage-prop"><td class="tblQmlPropNode"><p><a name="isSubPage-prop"></a><span class="name">isSubPage</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>If this is set to <code>true</code> a back button is displayed instead of the <a href="qml-quey-ui-menubutton.html">MenuButton</a> if any, indicating that this is a sub page.</p>
+</div></div><!-- @@@isSubPage -->
+<br/>
+<!-- $$$menu -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="menu-prop"><td class="tblQmlPropNode"><p><a name="menu-prop"></a><span class="name">menu</span> : <span class="type"><a href="qml-quey-ui-menu.html">Menu</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>If set this property provides the <a href="qml-quey-ui-menu.html">Menu</a> to be displayed by the integrated <a href="qml-quey-ui-menubutton.html">MenuButton</a>.</p>
+</div></div><!-- @@@menu -->
+<br/>
+<!-- $$$title -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="title-prop"><td class="tblQmlPropNode"><p><a name="title-prop"></a><span class="name">title</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>Sets the <a href="qml-quey-ui-actionbar.html">ActionBar</a>'s title.</p>
+</div></div><!-- @@@title -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$backClicked -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="backClicked-signal"><td class="tblQmlFuncNode"><p><a name="backClicked-signal"></a><span class="name">backClicked</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Called when the user pressed the back button. The back button is only visible if <a href="qml-quey-ui-actionbar.html#isSubPage-prop">isSubPage</a> is set to <code>true</code>.</p>
+</div></div><!-- @@@backClicked -->
+<br/>
+</body>
+</html>

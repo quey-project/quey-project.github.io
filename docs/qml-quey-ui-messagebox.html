@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- MessageBox.qml -->
+  <title>MessageBox QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">MessageBox QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$MessageBox-brief -->
+<p>Provides a messagebox with a row of buttons. <a href="#details">More...</a></p>
+<!-- @@@MessageBox -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="qml-quey-ui-dialog.html">Dialog</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-messagebox-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-messagebox.html#buttons-prop">buttons</a></b></b> : Button</li>
+</ul>
+<!-- $$$MessageBox-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<pre class="qml">import QtQuick 2.4
+import quey.ui 0.1
+
+<span class="type"><a href="qml-quey-ui-applicationview.html">ApplicationView</a></span> {
+    <span class="name">width</span>: <span class="number">640</span>
+    <span class="name">height</span>: <span class="number">480</span>
+
+    <span class="type"><a href="qml-quey-ui-button.html">Button</a></span> {
+        <span class="name">text</span>: <span class="string">&quot;Quit&quot;</span>
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+        <span class="name">onClicked</span>: <span class="name">message</span>.<span class="name">open</span>()
+    }
+
+    <span class="type"><a href="qml-quey-ui-messagebox.html">MessageBox</a></span> {
+        <span class="name">id</span>: <span class="name">message</span>
+        <span class="name">title</span>: <span class="string">&quot;Hey there&quot;</span>
+        <span class="name">text</span>: <span class="string">&quot;Are you sure to quit?&quot;</span>
+        <span class="name">buttons</span>: [
+            <span class="type"><a href="qml-quey-ui-button.html">Button</a></span> {
+                <span class="name">text</span>: <span class="string">&quot;yes&quot;</span>
+                <span class="name">onClicked</span>: <span class="name">Qt</span>.<span class="name">quit</span>()
+            },
+            <span class="type"><a href="qml-quey-ui-button.html">Button</a></span> {
+                <span class="name">text</span>: <span class="string">&quot;no&quot;</span>
+                <span class="name">onClicked</span>: <span class="name">message</span>.<span class="name">close</span>()
+            }
+        ]
+    }
+
+}</pre>
+<!-- @@@MessageBox -->
+<h2>Property Documentation</h2>
+<!-- $$$buttons -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="buttons-prop"><td class="tblQmlPropNode"><p><a name="buttons-prop"></a><span class="name">buttons</span> : <span class="type"><a href="qml-quey-ui-button.html">Button</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>A list of buttons. See <a href="qml-quey-ui-button.html">Button</a>.</p>
+</div></div><!-- @@@buttons -->
+<br/>
+</body>
+</html>

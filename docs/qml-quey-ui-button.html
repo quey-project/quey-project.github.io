@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Button.qml -->
+  <title>Button QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">Button QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$Button-brief -->
+<p>A simple button component <a href="#details">More...</a></p>
+<!-- @@@Button -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html">Item</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-button-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-button.html#color-prop">color</a></b></b> : color</li>
+<li class="fn"><b><b><a href="qml-quey-ui-button.html#hovered-prop">hovered</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-quey-ui-button.html#minimumWidth-prop">minimumWidth</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-button.html#pressed-prop">pressed</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-quey-ui-button.html#text-prop">text</a></b></b> : string</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-button.html#clicked-signal">clicked</a></b></b>()</li>
+</ul>
+<!-- $$$Button-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<pre class="qml">import QtQuick 2.4
+import quey.ui 0.1
+
+<span class="type"><a href="qml-quey-ui-applicationview.html">ApplicationView</a></span> {
+    <span class="name">width</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">640</span>)
+    <span class="name">height</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">480</span>)
+
+    <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-column.html">Column</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">anchors</span>.margins: <span class="name">Style</span>.<span class="name">spacing</span>
+        <span class="name">spacing</span>: <span class="name">Style</span>.<span class="name">spacing</span>
+
+        <span class="type"><a href="qml-quey-ui-button.html">Button</a></span> {
+            <span class="name">text</span>: <span class="string">&quot;Regular&quot;</span>
+            <span class="name">onClicked</span>: {
+                <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Keep calm - keep coding :)&quot;</span>)
+            }
+        }
+
+        <span class="type"><a href="qml-quey-ui-button.html">Button</a></span> {
+            <span class="name">text</span>: <span class="string">&quot;Warning&quot;</span>
+            <span class="name">color</span>: <span class="name">Style</span>.<span class="name">palette</span>.<span class="name">warning</span>
+        }
+
+        <span class="type"><a href="qml-quey-ui-button.html">Button</a></span> {
+            <span class="name">text</span>: <span class="string">&quot;Success&quot;</span>
+            <span class="name">color</span>: <span class="name">Style</span>.<span class="name">palette</span>.<span class="name">success</span>
+        }
+
+    }
+}</pre>
+<!-- @@@Button -->
+<h2>Property Documentation</h2>
+<!-- $$$color -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="color-prop"><td class="tblQmlPropNode"><p><a name="color-prop"></a><span class="name">color</span> : <span class="type">color</span></p></td></tr></table></div></div><div class="qmldoc"><p>The button's color. Defaults to <code>Style.palette.regular</code>.</p>
+</div></div><!-- @@@color -->
+<br/>
+<!-- $$$hovered -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hovered-prop"><td class="tblQmlPropNode"><p><a name="hovered-prop"></a><span class="name">hovered</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property is true when the mouse pointer hovers the button.</p>
+</div></div><!-- @@@hovered -->
+<br/>
+<!-- $$$minimumWidth -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="minimumWidth-prop"><td class="tblQmlPropNode"><p><a name="minimumWidth-prop"></a><span class="name">minimumWidth</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>The minimum width of the button. Defaults to <code>94</code>.</p>
+</div></div><!-- @@@minimumWidth -->
+<br/>
+<!-- $$$pressed -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pressed-prop"><td class="tblQmlPropNode"><p><a name="pressed-prop"></a><span class="name">pressed</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property is true when the left mouse button is pressed down over the button.</p>
+</div></div><!-- @@@pressed -->
+<br/>
+<!-- $$$text -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="text-prop"><td class="tblQmlPropNode"><p><a name="text-prop"></a><span class="name">text</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>The button's text. The button is automatically expanded based on the length of the text. To supress this behaivour assign a value to <code>width</code>.</p>
+</div></div><!-- @@@text -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$clicked -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="clicked-signal"><td class="tblQmlFuncNode"><p><a name="clicked-signal"></a><span class="name">clicked</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>This signal gets triggered when the button was clicked.</p>
+</div></div><!-- @@@clicked -->
+<br/>
+</body>
+</html>

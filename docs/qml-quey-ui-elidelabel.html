@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ElideLabel.qml -->
+  <title>ElideLabel QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">ElideLabel QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$ElideLabel-brief -->
+<p>Provides an automatically aliding label based on <a href="qml-quey-ui-elidelabel.html#elideWidth-prop">elideWidth</a> <a href="#details">More...</a></p>
+<!-- @@@ElideLabel -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html">Item</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-elidelabel-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-elidelabel.html#availableWidth-prop">availableWidth</a></b></b> : alias</li>
+<li class="fn"><b><b><a href="qml-quey-ui-elidelabel.html#color-prop">color</a></b></b> : color</li>
+<li class="fn"><b><b><a href="qml-quey-ui-elidelabel.html#elide-prop">elide</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-elidelabel.html#elideWidth-prop">elideWidth</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-elidelabel.html#font-prop">font</a></b></b> : font</li>
+<li class="fn"><b><b><a href="qml-quey-ui-elidelabel.html#text-prop">text</a></b></b> : string</li>
+</ul>
+<!-- $$$ElideLabel-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<pre class="qml">import QtQuick 2.4
+import quey.ui 0.1
+
+<span class="type"><a href="qml-quey-ui-applicationview.html">ApplicationView</a></span> {
+    <span class="name">width</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">640</span>)
+    <span class="name">height</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">480</span>)
+
+    <span class="type"><a href="qml-quey-ui-elidelabel.html">ElideLabel</a></span> {
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+        <span class="name">text</span>: <span class="string">&quot;Qt is awesome!&quot;</span>
+        <span class="name">elideWidth</span>: <span class="number">30</span>
+    }
+
+}</pre>
+<!-- @@@ElideLabel -->
+<h2>Property Documentation</h2>
+<!-- $$$availableWidth -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="availableWidth-prop"><td class="tblQmlPropNode"><p><a name="availableWidth-prop"></a><span class="name">availableWidth</span> : <span class="type">alias</span></p></td></tr></table></div></div><div class="qmldoc"><p>This is an alias for <a href="qml-quey-ui-elidelabel.html#elideWidth-prop">elideWidth</a>. You can't change this property.</p>
+</div></div><!-- @@@availableWidth -->
+<br/>
+<!-- $$$color -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="color-prop"><td class="tblQmlPropNode"><p><a name="color-prop"></a><span class="name">color</span> : <span class="type">color</span></p></td></tr></table></div></div><div class="qmldoc"><p>The label's color.</p>
+</div></div><!-- @@@color -->
+<br/>
+<!-- $$$elide -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="elide-prop"><td class="tblQmlPropNode"><p><a name="elide-prop"></a><span class="name">elide</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>The elide mode. Defaults to <code>Qt.ElideRight</code>. Possible values are:</p>
+<ul>
+<li><code>Qt.ElideLeft</code></li>
+<li><code>Qt.ElideMiddle</code></li>
+<li><code>Qt.ElideNone</code></li>
+<li><code>Qt.ElideRight</code></li>
+</ul>
+</div></div><!-- @@@elide -->
+<br/>
+<!-- $$$elideWidth -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="elideWidth-prop"><td class="tblQmlPropNode"><p><a name="elideWidth-prop"></a><span class="name">elideWidth</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>The width avaiable for this label. Defaults to it's <code>width</code>. If this property is set, the label automatically elides if the width is greater than <code>elideWidth</code>.</p>
+</div></div><!-- @@@elideWidth -->
+<br/>
+<!-- $$$font -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="font-prop"><td class="tblQmlPropNode"><p><a name="font-prop"></a><span class="name">font</span> : <span class="type"><a href="qml-quey-ui-elidelabel.html#font-prop">font</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The label's font.</p>
+</div></div><!-- @@@font -->
+<br/>
+<!-- $$$text -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="text-prop"><td class="tblQmlPropNode"><p><a name="text-prop"></a><span class="name">text</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>The label's text</p>
+</div></div><!-- @@@text -->
+<br/>
+</body>
+</html>

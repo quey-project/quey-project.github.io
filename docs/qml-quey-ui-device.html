@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Device.qml -->
+  <title>Device QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">Device QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$Device-brief -->
+<p>A singleton that provides information about the current device. <a href="#details">More...</a></p>
+<!-- @@@Device -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-device-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-device.html#desktop-prop">desktop</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-device.html#isMobile-prop">isMobile</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-quey-ui-device.html#name-prop">name</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-quey-ui-device.html#phablet-prop">phablet</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-device.html#phone-prop">phone</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-device.html#tablet-prop">tablet</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-device.html#tv-prop">tv</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-device.html#type-prop">type</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-device.html#unknown-prop">unknown</a></b></b> : int</li>
+</ul>
+<!-- $$$Device-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<pre class="qml">import QtQuick 2.4
+import quey.ui 0.1
+
+<span class="type"><a href="qml-quey-ui-applicationview.html">ApplicationView</a></span> {
+    <span class="name">width</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">640</span>)
+    <span class="name">height</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">480</span>)
+
+    <span class="type"><a href="qml-quey-ui-label.html">Label</a></span> {
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+        <span class="name">text</span>: <span class="string">&quot;You're running a %1&quot;</span>.<span class="name">arg</span>(<span class="name">Device</span>.<span class="name">name</span>)<span class="operator">+</span><span class="string">&quot;, how cool!&quot;</span>
+    }
+
+}</pre>
+<!-- @@@Device -->
+<h2>Property Documentation</h2>
+<!-- $$$desktop -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="desktop-prop"><td class="tblQmlPropNode"><p><a name="desktop-prop"></a><span class="qmlreadonly">read-only</span><span class="name">desktop</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@desktop -->
+<br/>
+<!-- $$$isMobile -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="isMobile-prop"><td class="tblQmlPropNode"><p><a name="isMobile-prop"></a><span class="qmlreadonly">read-only</span><span class="name">isMobile</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property is <code>true</code> if the device is mobile.</p>
+</div></div><!-- @@@isMobile -->
+<br/>
+<!-- $$$name -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="name-prop"><td class="tblQmlPropNode"><p><a name="name-prop"></a><span class="qmlreadonly">read-only</span><span class="name">name</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>The device name as string. Possible values are <code>&quot;phone&quot;</code>, <code>&quot;phablet&quot;</code>, <code>&quot;tablet&quot;</code>, <code>&quot;computer&quot;</code>, <code>&quot;TV&quot;</code>, <code>&quot;device&quot;</code>. <code>&quot;device&quot;</code> is returned if the <a href="qml-quey-ui-device.html#type-prop">type</a> is <a href="qml-quey-ui-device.html#unknown-prop">unknown</a>.</p>
+</div></div><!-- @@@name -->
+<br/>
+<!-- $$$phablet -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="phablet-prop"><td class="tblQmlPropNode"><p><a name="phablet-prop"></a><span class="qmlreadonly">read-only</span><span class="name">phablet</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@phablet -->
+<br/>
+<!-- $$$phone -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="phone-prop"><td class="tblQmlPropNode"><p><a name="phone-prop"></a><span class="qmlreadonly">read-only</span><span class="name">phone</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@phone -->
+<br/>
+<!-- $$$tablet -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="tablet-prop"><td class="tblQmlPropNode"><p><a name="tablet-prop"></a><span class="qmlreadonly">read-only</span><span class="name">tablet</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@tablet -->
+<br/>
+<!-- $$$tv -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="tv-prop"><td class="tblQmlPropNode"><p><a name="tv-prop"></a><span class="qmlreadonly">read-only</span><span class="name">tv</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@tv -->
+<br/>
+<!-- $$$type -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="type-prop"><td class="tblQmlPropNode"><p><a name="type-prop"></a><span class="name">type</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>The device type, enum-like.</p>
+</div></div><!-- @@@type -->
+<br/>
+<!-- $$$unknown -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="unknown-prop"><td class="tblQmlPropNode"><p><a name="unknown-prop"></a><span class="qmlreadonly">read-only</span><span class="name">unknown</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@unknown -->
+<br/>
+</body>
+</html>

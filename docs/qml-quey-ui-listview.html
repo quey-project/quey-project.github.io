@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ListView.qml -->
+  <title>ListView QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">ListView QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$ListView-brief -->
+<p>Provides a list view. <a href="#details">More...</a></p>
+<!-- @@@ListView -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-listview-members.html">List of all members, including inherited members</a></li>
+</ul>
+<!-- $$$ListView-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<pre class="qml">import QtQuick 2.4
+import quey.ui 0.1
+
+<span class="type"><a href="qml-quey-ui-applicationview.html">ApplicationView</a></span> {
+    <span class="type"><a href="qml-quey-ui-listview.html">ListView</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+
+        <span class="name">delegate</span>: <span class="name">ListItem</span> {
+            <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>
+            <span class="type"><a href="qml-quey-ui-label.html">Label</a></span> {
+                <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+                <span class="name">text</span>: <span class="name">index</span><span class="operator">+</span><span class="number">1</span>
+            }
+        }
+
+        <span class="name">model</span>: <span class="number">30</span>
+    }
+}</pre>
+<p><a href="qml-quey-ui-listview.html">ListView</a> is based on <code>QtQuick.ListView</code>. Please refer to the Qt documentation for more information.</p>
+<!-- @@@ListView -->
+</body>
+</html>

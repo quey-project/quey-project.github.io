@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- FontPalette.qml -->
+  <title>FontPalette QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">FontPalette QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$FontPalette-brief -->
+<p>Defines the fonts <a href="#details">More...</a></p>
+<!-- @@@FontPalette -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html">Item</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-fontpalette-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-fontpalette.html#code-prop">code</a></b></b> : font</li>
+<li class="fn"><b><b><a href="qml-quey-ui-fontpalette.html#heading-prop">heading</a></b></b> : font</li>
+<li class="fn"><b><b><a href="qml-quey-ui-fontpalette.html#regular-prop">regular</a></b></b> : font</li>
+<li class="fn"><b><b><a href="qml-quey-ui-fontpalette.html#subheading-prop">subheading</a></b></b> : font</li>
+</ul>
+<!-- $$$FontPalette-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p><a href="qml-quey-ui-fontpalette.html">FontPalette</a> holds set of fonts. It should be used within a <a href="qml-quey-ui-theme.html">Theme</a> to define its font set:</p>
+<pre class="qml">import QtQuick 2.4
+import quey.ui 0.1
+
+<span class="type"><a href="qml-quey-ui-theme.html">Theme</a></span> {
+    <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-fontloader.html">FontLoader</a></span> {
+        <span class="name">id</span>: <span class="name">myFont</span>
+        <span class="name">source</span>: <span class="string">&quot;myfont.ttf&quot;</span>
+    }
+
+    <span class="name">font</span>: <span class="name">FontPalette</span> {
+        <span class="name">regular</span>: <span class="name">Qt</span>.<span class="name">font</span>({
+            family: <span class="name">myFont</span>.<span class="name">name</span>,
+            pixelSize: <span class="number">16</span>
+        })
+    }
+}</pre>
+<p>It is recommended to use <a href="http://doc.qt.io/qt-5/qml-qtquick-fontloader.html">FontLoader</a> to load custom fonts.</p>
+<!-- @@@FontPalette -->
+<h2>Property Documentation</h2>
+<!-- $$$code -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="code-prop"><td class="tblQmlPropNode"><p><a name="code-prop"></a><span class="name">code</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-font.html">font</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The font to be used in case of source codes.</p>
+</div></div><!-- @@@code -->
+<br/>
+<!-- $$$heading -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="heading-prop"><td class="tblQmlPropNode"><p><a name="heading-prop"></a><span class="name">heading</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-font.html">font</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The font for headings.</p>
+</div></div><!-- @@@heading -->
+<br/>
+<!-- $$$regular -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="regular-prop"><td class="tblQmlPropNode"><p><a name="regular-prop"></a><span class="name">regular</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-font.html">font</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The regular font.</p>
+</div></div><!-- @@@regular -->
+<br/>
+<!-- $$$subheading -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="subheading-prop"><td class="tblQmlPropNode"><p><a name="subheading-prop"></a><span class="name">subheading</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-font.html">font</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The font for subheadings.</p>
+</div></div><!-- @@@subheading -->
+<br/>
+</body>
+</html>

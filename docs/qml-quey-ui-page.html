@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Page.qml -->
+  <title>Page QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">Page QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$Page-brief -->
+<p>Represents a page on the navigation page stack. <a href="#details">More...</a></p>
+<!-- @@@Page -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html">Item</a></p>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qml-quey-ui-tabpage.html">TabPage</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-page-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-page.html#actions-prop">actions</a></b></b> : Action</li>
+<li class="fn"><b><b><a href="qml-quey-ui-page.html#containers-prop">containers</a></b></b> : PageContainer</li>
+<li class="fn"><b><b><a href="qml-quey-ui-page.html#hasMenu-prop">hasMenu</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-quey-ui-page.html#menu-prop">menu</a></b></b> : Menu</li>
+<li class="fn"><b><b><a href="qml-quey-ui-page.html#menuItems-prop">menuItems</a></b></b> : MenuItem</li>
+<li class="fn"><b><b><a href="qml-quey-ui-page.html#showHeader-prop">showHeader</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-quey-ui-page.html#title-prop">title</a></b></b> : string</li>
+</ul>
+<!-- $$$Page-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<!-- @@@Page -->
+<h2>Property Documentation</h2>
+<!-- $$$actions -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="actions-prop"><td class="tblQmlPropNode"><p><a name="actions-prop"></a><span class="name">actions</span> : <span class="type"><a href="qml-quey-ui-action.html">Action</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>A list of actions attached to the page.</p>
+</div></div><!-- @@@actions -->
+<br/>
+<!-- $$$containers -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="containers-prop"><td class="tblQmlPropNode"><p><a name="containers-prop"></a><span class="name">containers</span> : <span class="type"><a href="qml-quey-ui-pagecontainer.html">PageContainer</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>An list of <a href="qml-quey-ui-pagecontainer.html">PageContainer</a> items this page may be displayed in.</p>
+</div></div><!-- @@@containers -->
+<br/>
+<!-- $$$hasMenu -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hasMenu-prop"><td class="tblQmlPropNode"><p><a name="hasMenu-prop"></a><span class="qmlreadonly">read-only</span><span class="name">hasMenu</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property is <code>true</code> if <a href="qml-quey-ui-page.html#menu-prop">menu</a> is valid.</p>
+</div></div><!-- @@@hasMenu -->
+<br/>
+<!-- $$$menu -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="menu-prop"><td class="tblQmlPropNode"><p><a name="menu-prop"></a><span class="name">menu</span> : <span class="type"><a href="qml-quey-ui-menu.html">Menu</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The attached <a href="qml-quey-ui-menu.html">Menu</a>. You can use <a href="qml-quey-ui-page.html#menuItems-prop">menuItems</a> alternatively.</p>
+</div></div><!-- @@@menu -->
+<br/>
+<!-- $$$menuItems -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="menuItems-prop"><td class="tblQmlPropNode"><p><a name="menuItems-prop"></a><span class="name">menuItems</span> : <span class="type"><a href="qml-quey-ui-menuitem.html">MenuItem</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>A list of <a href="qml-quey-ui-menuitem.html">MenuItem</a>.</p>
+</div></div><!-- @@@menuItems -->
+<br/>
+<!-- $$$showHeader -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="showHeader-prop"><td class="tblQmlPropNode"><p><a name="showHeader-prop"></a><span class="name">showHeader</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>Set this to <code>false</code> if you want to hide the page header.</p>
+</div></div><!-- @@@showHeader -->
+<br/>
+<!-- $$$title -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="title-prop"><td class="tblQmlPropNode"><p><a name="title-prop"></a><span class="name">title</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>The title to be displayed in the page header.</p>
+</div></div><!-- @@@title -->
+<br/>
+</body>
+</html>

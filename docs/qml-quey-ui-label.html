@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Label.qml -->
+  <title>Label QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">Label QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$Label-brief -->
+<p>Provides a text label with metrics and Quey styling. <a href="#details">More...</a></p>
+<!-- @@@Label -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-text.html">Text</a></p>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qml-quey-ui-wraplabel.html">WrapLabel</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-label-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-label.html#metrics-prop">metrics</a></b></b> : TextMetrics</li>
+</ul>
+<!-- $$$Label-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<pre class="qml">import QtQuick 2.4
+import quey.ui 0.1
+
+<span class="type"><a href="qml-quey-ui-applicationview.html">ApplicationView</a></span> {
+    <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-column.html">Column</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">anchors</span>.margins: <span class="name">Style</span>.<span class="name">spacing</span>
+        <span class="name">spacing</span>: <span class="name">Style</span>.<span class="name">spacing</span>
+
+        <span class="type"><a href="qml-quey-ui-label.html">Label</a></span> {
+            <span class="name">font</span>: <span class="name">Style</span>.<span class="name">font</span>.<span class="name">heading</span>
+            <span class="name">text</span>: <span class="string">&quot;This is big&quot;</span>
+            <span class="name">color</span>: <span class="name">Style</span>.<span class="name">palette</span>.<span class="name">red</span>
+        }
+
+        <span class="type"><a href="qml-quey-ui-label.html">Label</a></span> {
+            <span class="name">font</span>: <span class="name">Style</span>.<span class="name">font</span>.<span class="name">subheading</span>
+            <span class="name">text</span>: <span class="string">&quot;This is stylish&quot;</span>
+            <span class="name">color</span>: <span class="name">Style</span>.<span class="name">palette</span>.<span class="name">success</span>
+        }
+
+        <span class="type"><a href="qml-quey-ui-label.html">Label</a></span> {
+            <span class="name">text</span>: <span class="string">&quot;This is amazing&quot;</span>
+            <span class="name">color</span>: <span class="name">Style</span>.<span class="name">palette</span>.<span class="name">primary</span>
+        }
+    }
+}</pre>
+<p>Based on <code>QtQuick.Text</code>. Please refer to the <a href="http://doc.qt.io/qt-5/qml-qtquick-text.html">Qt documentation</a> for more information.</p>
+<!-- @@@Label -->
+<h2>Property Documentation</h2>
+<!-- $$$metrics -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="metrics-prop"><td class="tblQmlPropNode"><p><a name="metrics-prop"></a><span class="name">metrics</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-textmetrics.html">TextMetrics</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property provides metrics based on font and text. Please refer to the <a href="http://doc.qt.io/qt-5/qml-qtquick-textmetrics.html">Qt documentation</a> for more information.</p>
+</div></div><!-- @@@metrics -->
+<br/>
+</body>
+</html>

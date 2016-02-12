@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- PageView.qml -->
+  <title>PageView QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">PageView QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$PageView-brief -->
+<p>An abstract item that manages a set of pages inside through a defined set of containers. <a href="#details">More...</a></p>
+<!-- @@@PageView -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html">Item</a></p>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qml-quey-ui-pagerowlayout.html">PageRowLayout</a> and <a href="qml-quey-ui-pagestack.html">PageStack</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-pageview-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-pageview.html#containers-prop">containers</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="qml-quey-ui-pageview.html#pages-prop">pages</a></b></b> : var</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-pageview.html#pagePopped-signal">pagePopped</a></b></b>(Page <i> page</i>)</li>
+<li class="fn"><b><b><a href="qml-quey-ui-pageview.html#pagePushed-signal">pagePushed</a></b></b>(Page <i> page</i>)</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-pageview.html#pop-method">pop</a></b></b>(<i> page</i>)</li>
+<li class="fn"><b><b><a href="qml-quey-ui-pageview.html#push-method">push</a></b></b>(<i> page</i>)</li>
+</ul>
+<!-- $$$PageView-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<!-- @@@PageView -->
+<h2>Property Documentation</h2>
+<!-- $$$containers -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="containers-prop"><td class="tblQmlPropNode"><p><a name="containers-prop"></a><span class="name">containers</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html">Item</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>The list of containers attached to this view.</p>
+</div></div><!-- @@@containers -->
+<br/>
+<!-- $$$pages -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pages-prop"><td class="tblQmlPropNode"><p><a name="pages-prop"></a><span class="name">pages</span> : <span class="type">var</span></p></td></tr></table></div></div><div class="qmldoc"><p>The list of pages this view currently holds.</p>
+</div></div><!-- @@@pages -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$pagePopped -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pagePopped-signal"><td class="tblQmlFuncNode"><p><a name="pagePopped-signal"></a><span class="name">pagePopped</span>(<span class="type"><a href="qml-quey-ui-page.html">Page</a></span><i> page</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Emitted when a page was popped.</p>
+</div></div><!-- @@@pagePopped -->
+<br/>
+<!-- $$$pagePushed -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pagePushed-signal"><td class="tblQmlFuncNode"><p><a name="pagePushed-signal"></a><span class="name">pagePushed</span>(<span class="type"><a href="qml-quey-ui-page.html">Page</a></span><i> page</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Emitted when a page was pushed.</p>
+</div></div><!-- @@@pagePushed -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$pop -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pop-method"><td class="tblQmlFuncNode"><p><a name="pop-method"></a><span class="name">pop</span>(<i> page</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Remove a page from the view.</p>
+</div></div><!-- @@@pop -->
+<br/>
+<!-- $$$push -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="push-method"><td class="tblQmlFuncNode"><p><a name="push-method"></a><span class="name">push</span>(<i> page</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Add a page to the view.</p>
+</div></div><!-- @@@push -->
+<br/>
+</body>
+</html>

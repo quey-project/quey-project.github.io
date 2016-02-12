@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Dialog.qml -->
+  <title>Dialog QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">Dialog QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$Dialog-brief -->
+<p>A dialog component. <a href="#details">More...</a></p>
+<!-- @@@Dialog -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="qml-quey-ui-popupbase.html">PopupBase</a></p>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qml-quey-ui-messagebox.html">MessageBox</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-dialog-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#appliedMaximumHeight-prop">appliedMaximumHeight</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#appliedMaximumWidth-prop">appliedMaximumWidth</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#content-prop">content</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#contentAvailableHeight-prop">contentAvailableHeight</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#contentAvailableWidth-prop">contentAvailableWidth</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#contentHeight-prop">contentHeight</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#contentMargins-prop">contentMargins</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#dismissOnCloseKey-prop">dismissOnCloseKey</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#flickable-prop">flickable</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#maximumHeight-prop">maximumHeight</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#maximumWidth-prop">maximumWidth</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#minimumHeight-prop">minimumHeight</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#minimumWidth-prop">minimumWidth</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#text-prop">text</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#title-prop">title</a></b></b> : string</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-dialog.html#closeKeyPressed-signal">closeKeyPressed</a></b></b>(var <i> event</i>)</li>
+</ul>
+<!-- $$$Dialog-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p><a href="qml-quey-ui-dialog.html">Dialog</a> is a feature rich window component for the use as modal dialog. It's both suitable as a simple message box as well as an advanced modal (for example to show settings).</p>
+<pre class="qml">import QtQuick 2.4
+import quey.ui 0.1
+
+<span class="type"><a href="qml-quey-ui-applicationview.html">ApplicationView</a></span> {
+    <span class="type"><a href="qml-quey-ui-button.html">Button</a></span> {
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+        <span class="name">text</span>: <span class="string">&quot;Open Dialog&quot;</span>
+        <span class="name">onClicked</span>: <span class="name">dialog</span>.<span class="name">open</span>()
+    }
+
+    <span class="type"><a href="qml-quey-ui-dialog.html">Dialog</a></span> {
+        <span class="name">id</span>: <span class="name">dialog</span>
+        <span class="name">maximumWidth</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">640</span>)
+        <span class="name">maximumHeight</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">480</span>)
+        <span class="name">title</span>: <span class="string">&quot;My Dialog&quot;</span>
+        <span class="name">text</span>: <span class="string">&quot;Hello World&quot;</span>
+    }
+}</pre>
+<p>In this example we made use of the <a href="qml-quey-ui-dialog.html#title-prop">title</a> and <a href="qml-quey-ui-dialog.html#text-prop">text</a> properties which make it very easy to create a slick message box without much effort. However, it's also possible to set a custom content item instead:</p>
+<pre class="qml"><span class="type"><a href="qml-quey-ui-dialog.html">Dialog</a></span> {
+    <span class="name">id</span>: <span class="name">dialog</span>
+    <span class="name">title</span>: <span class="string">&quot;Dialog with custom content&quot;</span>
+
+    <span class="name">content</span>: <span class="name">Column</span> {
+        <span class="name">width</span>: <span class="name">childrenRect</span>.<span class="name">width</span>
+        <span class="name">height</span>: <span class="name">childrenRect</span>.<span class="name">height</span>
+
+        <span class="name">spacing</span>: <span class="name">Style</span>.<span class="name">spacing</span>
+
+        <span class="type"><a href="qml-quey-ui-wraplabel.html">WrapLabel</a></span> {
+            <span class="name">id</span>: <span class="name">label</span>
+            <span class="name">availableWidth</span>: <span class="name">dialog</span>.<span class="name">contentAvailableWidth</span>
+            <span class="name">text</span>: <span class="string">&quot;This text will be wrapped based on the dialog's available width.&quot;</span>
+        }
+
+        <span class="type"><a href="qml-quey-ui-activityindicator.html">ActivityIndicator</a></span> {
+            <span class="name">running</span>: <span class="name">checkbox</span>.<span class="name">checked</span>
+        }
+
+        <span class="type"><a href="qml-quey-ui-checkbox.html">CheckBox</a></span> {
+            <span class="name">id</span>: <span class="name">checkbox</span>
+            <span class="name">text</span>: <span class="string">&quot;running&quot;</span>
+        }
+
+        <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-row.html">Row</a></span> {
+            <span class="name">spacing</span>: <span class="name">Style</span>.<span class="name">spacing</span>
+            <span class="name">width</span>: <span class="name">Math</span>.<span class="name">max</span>(<span class="name">childrenRect</span>.<span class="name">width</span>, <span class="name">label</span>.<span class="name">width</span>)
+            <span class="name">layoutDirection</span>: <span class="name">Qt</span>.<span class="name">RightToLeft</span>
+
+            <span class="type"><a href="qml-quey-ui-button.html">Button</a></span> {
+                <span class="name">text</span>: <span class="string">&quot;no&quot;</span>
+            }
+
+            <span class="type"><a href="qml-quey-ui-button.html">Button</a></span> {
+                <span class="name">text</span>: <span class="string">&quot;yes&quot;</span>
+            }
+        }
+    }
+}</pre>
+<!-- @@@Dialog -->
+<h2>Property Documentation</h2>
+<!-- $$$appliedMaximumHeight -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="appliedMaximumHeight-prop"><td class="tblQmlPropNode"><p><a name="appliedMaximumHeight-prop"></a><span class="qmlreadonly">read-only</span><span class="name">appliedMaximumHeight</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the actual maximum height that can be applied. Used internally.</p>
+</div></div><!-- @@@appliedMaximumHeight -->
+<br/>
+<!-- $$$appliedMaximumWidth -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="appliedMaximumWidth-prop"><td class="tblQmlPropNode"><p><a name="appliedMaximumWidth-prop"></a><span class="qmlreadonly">read-only</span><span class="name">appliedMaximumWidth</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the actual maximum width that can be applied. Used internally.</p>
+</div></div><!-- @@@appliedMaximumWidth -->
+<br/>
+<!-- $$$content -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="content-prop"><td class="tblQmlPropNode"><p><a name="content-prop"></a><span class="name">content</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html">Item</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>Allows assigning custom content to the dialog. To be used instead of <a href="qml-quey-ui-dialog.html#text-prop">text</a>.</p>
+</div></div><!-- @@@content -->
+<br/>
+<!-- $$$contentAvailableHeight -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentAvailableHeight-prop"><td class="tblQmlPropNode"><p><a name="contentAvailableHeight-prop"></a><span class="qmlreadonly">read-only</span><span class="name">contentAvailableHeight</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>The height available to the dialog content.</p>
+</div></div><!-- @@@contentAvailableHeight -->
+<br/>
+<!-- $$$contentAvailableWidth -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentAvailableWidth-prop"><td class="tblQmlPropNode"><p><a name="contentAvailableWidth-prop"></a><span class="qmlreadonly">read-only</span><span class="name">contentAvailableWidth</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>The width available to the dialog content based on the margins and maximum width.</p>
+</div></div><!-- @@@contentAvailableWidth -->
+<br/>
+<!-- $$$contentHeight -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentHeight-prop"><td class="tblQmlPropNode"><p><a name="contentHeight-prop"></a><span class="qmlreadonly">read-only</span><span class="name">contentHeight</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>The height of the dialogs content.</p>
+</div></div><!-- @@@contentHeight -->
+<br/>
+<!-- $$$contentMargins -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="contentMargins-prop"><td class="tblQmlPropNode"><p><a name="contentMargins-prop"></a><span class="name">contentMargins</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>The margins of the <a href="qml-quey-ui-dialog.html#content-prop">content</a> item. Defaults to <code>24</code></p>
+</div></div><!-- @@@contentMargins -->
+<br/>
+<!-- $$$dismissOnCloseKey -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dismissOnCloseKey-prop"><td class="tblQmlPropNode"><p><a name="dismissOnCloseKey-prop"></a><span class="name">dismissOnCloseKey</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>If set to <code>true</code> the dialog is closed when pressing the close key.</p>
+</div></div><!-- @@@dismissOnCloseKey -->
+<br/>
+<!-- $$$flickable -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="flickable-prop"><td class="tblQmlPropNode"><p><a name="flickable-prop"></a><span class="name">flickable</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>If set to true, the content is flickable.</p>
+</div></div><!-- @@@flickable -->
+<br/>
+<!-- $$$maximumHeight -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="maximumHeight-prop"><td class="tblQmlPropNode"><p><a name="maximumHeight-prop"></a><span class="name">maximumHeight</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property sets the maximum height of the dialog.</p>
+</div></div><!-- @@@maximumHeight -->
+<br/>
+<!-- $$$maximumWidth -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="maximumWidth-prop"><td class="tblQmlPropNode"><p><a name="maximumWidth-prop"></a><span class="name">maximumWidth</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property sets the maximum width of the dialog.</p>
+</div></div><!-- @@@maximumWidth -->
+<br/>
+<!-- $$$minimumHeight -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="minimumHeight-prop"><td class="tblQmlPropNode"><p><a name="minimumHeight-prop"></a><span class="name">minimumHeight</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property sets the minimum height of the dialog.</p>
+</div></div><!-- @@@minimumHeight -->
+<br/>
+<!-- $$$minimumWidth -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="minimumWidth-prop"><td class="tblQmlPropNode"><p><a name="minimumWidth-prop"></a><span class="name">minimumWidth</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property sets the minimum width of the dialog.</p>
+</div></div><!-- @@@minimumWidth -->
+<br/>
+<!-- $$$text -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="text-prop"><td class="tblQmlPropNode"><p><a name="text-prop"></a><span class="name">text</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>The dialog's text to be rendered instead of a custom <a href="qml-quey-ui-dialog.html#content-prop">content</a> Item.</p>
+</div></div><!-- @@@text -->
+<br/>
+<!-- $$$title -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="title-prop"><td class="tblQmlPropNode"><p><a name="title-prop"></a><span class="name">title</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>The dialog's title.</p>
+</div></div><!-- @@@title -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$closeKeyPressed -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="closeKeyPressed-signal"><td class="tblQmlFuncNode"><p><a name="closeKeyPressed-signal"></a><span class="name">closeKeyPressed</span>(<span class="type">var</span><i> event</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Emitted when the close key was pressed.</p>
+</div></div><!-- @@@closeKeyPressed -->
+<br/>
+</body>
+</html>

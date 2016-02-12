@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- PageContainer.qml -->
+  <title>PageContainer QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">PageContainer QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$PageContainer-brief -->
+<p>Container element for page navigation <a href="#details">More...</a></p>
+<!-- @@@PageContainer -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html">Item</a></p>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qml-quey-ui-pagecolumn.html">PageColumn</a>, <a href="qml-quey-ui-pagedialog.html">PageDialog</a>, and <a href="qml-quey-ui-pagewindow.html">PageWindow</a></p>
+</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-pagecontainer-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-pagecontainer.html#currentPage-prop">currentPage</a></b></b> : var</li>
+<li class="fn"><b><b><a href="qml-quey-ui-pagecontainer.html#d-prop">d</a></b></b> : QtObject</li>
+<li class="fn"><b><b><a href="qml-quey-ui-pagecontainer.html#hidden-prop">hidden</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-quey-ui-pagecontainer.html#isEmpty-prop">isEmpty</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-quey-ui-pagecontainer.html#isSubPage-prop">isSubPage</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-quey-ui-pagecontainer.html#pageView-prop">pageView</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="qml-quey-ui-pagecontainer.html#pages-prop">pages</a></b></b> : var</li>
+<li class="fn"><b><b><a href="qml-quey-ui-pagecontainer.html#when-prop">when</a></b></b> : bool</li>
+</ul>
+<!-- $$$PageContainer-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<p><code>PageContainer</code> is an abstract item to provide a container element for pages. PageContainers are used within of a <a href="qml-quey-ui-pageview.html">PageView</a>.</p>
+<!-- @@@PageContainer -->
+<h2>Property Documentation</h2>
+<!-- $$$currentPage -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="currentPage-prop"><td class="tblQmlPropNode"><p><a name="currentPage-prop"></a><span class="name">currentPage</span> : <span class="type">var</span></p></td></tr></table></div></div><div class="qmldoc"><p>The current page.</p>
+</div></div><!-- @@@currentPage -->
+<br/>
+<!-- $$$d -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="d-prop"><td class="tblQmlPropNode"><p><a name="d-prop"></a><span class="name">d</span> : <span class="type">QtObject</span></p></td></tr></table></div></div><div class="qmldoc"><p>This is used internally.</p>
+</div></div><!-- @@@d -->
+<br/>
+<!-- $$$hidden -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="hidden-prop"><td class="tblQmlPropNode"><p><a name="hidden-prop"></a><span class="name">hidden</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>Condition hiding the container. Defaults to <code>undefined</code>.</p>
+</div></div><!-- @@@hidden -->
+<br/>
+<!-- $$$isEmpty -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="isEmpty-prop"><td class="tblQmlPropNode"><p><a name="isEmpty-prop"></a><span class="qmlreadonly">read-only</span><span class="name">isEmpty</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p><code>true</code> if there are no <a href="qml-quey-ui-pagecontainer.html#pages-prop">pages</a> attached currently.</p>
+</div></div><!-- @@@isEmpty -->
+<br/>
+<!-- $$$isSubPage -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="isSubPage-prop"><td class="tblQmlPropNode"><p><a name="isSubPage-prop"></a><span class="qmlreadonly">read-only</span><span class="name">isSubPage</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p><code>true</code>, if the current page is a sub page.</p>
+</div></div><!-- @@@isSubPage -->
+<br/>
+<!-- $$$pageView -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pageView-prop"><td class="tblQmlPropNode"><p><a name="pageView-prop"></a><span class="name">pageView</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html">Item</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>Must be set to the <a href="qml-quey-ui-pageview.html">PageView</a> this container belongs to.</p>
+</div></div><!-- @@@pageView -->
+<br/>
+<!-- $$$pages -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pages-prop"><td class="tblQmlPropNode"><p><a name="pages-prop"></a><span class="name">pages</span> : <span class="type">var</span></p></td></tr></table></div></div><div class="qmldoc"><p>A list of pages this container currently holds.</p>
+</div></div><!-- @@@pages -->
+<br/>
+<!-- $$$when -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="when-prop"><td class="tblQmlPropNode"><p><a name="when-prop"></a><span class="name">when</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>Condition activating the container. Defaults to <code>undefined</code>.</p>
+</div></div><!-- @@@when -->
+<br/>
+</body>
+</html>

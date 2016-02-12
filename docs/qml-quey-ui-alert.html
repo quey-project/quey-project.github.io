@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- alert.js -->
+  <title>Alert QML Type | quey-ui 0.1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">Alert QML Type</h1>
+<span class="subtitle"></span>
+<!-- $$$Alert-brief -->
+<p>Provides dynamic alert boxes <a href="#details">More...</a></p>
+<!-- @@@Alert -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr></table></div><ul>
+<li><a href="qml-quey-ui-alert-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-alert.html#Button-method">Button</a></b></b>(string <i> text</i>, function <i> callback</i>)</li>
+<li class="fn"><b><b><a href="qml-quey-ui-alert.html#show-method">show</a></b></b>(string <i> title</i>, string <i> text</i>, Button <i> button1</i>, Button <i> button2</i>, ..., function <i> onclosed</i>)</li>
+</ul>
+<!-- $$$Alert-description -->
+<a name="details"></a>
+<h2 id="details">Detailed Description</h2>
+</p>
+<pre class="qml">import QtQuick 2.4
+import quey.ui 0.1
+
+
+<span class="type"><a href="qml-quey-ui-applicationview.html">ApplicationView</a></span> {
+    <span class="name">width</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">640</span>)
+    <span class="name">height</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">480</span>)
+
+    <span class="type"><a href="qml-quey-ui-alert.html#Button-method">Button</a></span> {
+        <span class="name">text</span>: <span class="string">&quot;Click me&quot;</span>
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+        <span class="name">onClicked</span>: {
+            <span class="name">Alert</span>.<span class="name">show</span>(<span class="string">&quot;Alert!&quot;</span>, <span class="string">&quot;This is a very simple dialog&quot;</span>,
+                       new <span class="name">Alert</span>.<span class="name">Button</span>(<span class="string">&quot;1&quot;</span>, <span class="keyword">function</span>(){
+                           <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Button 1 clicked&quot;</span>);
+                       }),
+                       new <span class="name">Alert</span>.<span class="name">Button</span>(<span class="string">&quot;2&quot;</span>, <span class="keyword">function</span>(){
+                            <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Button 2 clicked&quot;</span>);
+                       })
+            );
+        }
+    }
+}</pre>
+<!-- @@@Alert -->
+<h2>Method Documentation</h2>
+<!-- $$$Button -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="Button-method"><td class="tblQmlFuncNode"><p><a name="Button-method"></a><span class="name">Button</span>(<span class="type">string</span><i> text</i>, <span class="type">function</span><i> callback</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Dynamically constructs a button object to be used within <a href="qml-quey-ui-alert.html#show-method">show</a>.</p>
+</div></div><!-- @@@Button -->
+<br/>
+<!-- $$$show -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="show-method"><td class="tblQmlFuncNode"><p><a name="show-method"></a><span class="name">show</span>(<span class="type">string</span><i> title</i>, <span class="type">string</span><i> text</i>, <span class="type"><a href="qml-quey-ui-alert.html#Button-method">Button</a></span><i> button1</i>, <span class="type"><a href="qml-quey-ui-alert.html#Button-method">Button</a></span><i> button2</i>, ..., <span class="type">function</span><i> onclosed</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Shows an alert box.</p>
+</div></div><!-- @@@show -->
+<br/>
+</body>
+</html>
