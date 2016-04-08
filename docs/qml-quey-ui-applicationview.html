@@ -22,7 +22,7 @@
 <p>Provides the root item for applications <a href="#details">More...</a></p>
 <!-- @@@ApplicationView -->
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="qml-quey-ui-window.html">Window</a></p>
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import quey.ui 0.1</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-rectangle.html">Rectangle</a></p>
 </td></tr></table></div><ul>
 <li><a href="qml-quey-ui-applicationview-members.html">List of all members, including inherited members</a></li>
 </ul>
@@ -30,7 +30,7 @@
 <a name="details"></a>
 <h2 id="details">Detailed Description</h2>
 </p>
-<p>It is recommended to use <a href="qml-quey-ui-applicationview.html">ApplicationView</a> as the root component for any Quey UI based application.</p>
+<p>It is recommended to use either <a href="qml-quey-ui-applicationview.html">ApplicationView</a> or <a href="qml-quey-ui-applicationwindow.html">ApplicationWindow</a> as root component for any Quey UI based application.</p>
 <p><a href="qml-quey-ui-applicationview.html">ApplicationView</a> provides layer components neccessary to display popups like <a href="qml-quey-ui-dialog.html">Dialog</a> or <a href="qml-quey-ui-menu.html">Menu</a>. Those layers have a <code>z</code> value of <code>25</code>. Please keep the <code>z</code> values of your items under this value unless you want those items to be displayed above popups.</p>
 <pre class="qml">import QtQuick 2.4
 import quey.ui 0.1
@@ -39,13 +39,12 @@ import quey.ui 0.1
     <span class="name">width</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">640</span>)
     <span class="name">height</span>: <span class="name">Units</span>.<span class="name">dp</span>(<span class="number">480</span>)
 
-    <span class="name">title</span>: <span class="string">&quot;My Awesome Application&quot;</span>
-
     <span class="type"><a href="qml-quey-ui-button.html">Button</a></span> {
         <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
         <span class="name">text</span>: <span class="string">&quot;Hello World&quot;</span>
     }
 }</pre>
+<p>Also see <a href="qml-quey-ui-applicationwindow.html">ApplicationWindow</a>.</p>
 <!-- @@@ApplicationView -->
 </body>
 </html>

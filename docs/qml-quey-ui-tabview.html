@@ -48,13 +48,13 @@
 <a name="methods"></a>
 <h2 id="methods">Methods</h2>
 <ul>
-<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#addTab-method">addTab</a></b></b>(<i> view</i>,  <i> background</i>)</li>
-<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#ensureTabIsVisible-method">ensureTabIsVisible</a></b></b>(<i> t</i>)</li>
-<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#getTabModelDataByUID-method">getTabModelDataByUID</a></b></b>(<i> uid</i>)</li>
-<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#getTabModelIndexByUID-method">getTabModelIndexByUID</a></b></b>(<i> uid</i>)</li>
-<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#getUIDByModelIndex-method">getUIDByModelIndex</a></b></b>(<i> i</i>)</li>
-<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#removeTab-method">removeTab</a></b></b>(<i> t</i>)</li>
-<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#setActiveTab-method">setActiveTab</a></b></b>(<i> t</i>,  <i> ensureVisible</i>)</li>
+<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#addTab-method">addTab</a></b></b>(<i>view</i>, <i>background</i>)</li>
+<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#ensureTabIsVisible-method">ensureTabIsVisible</a></b></b>(<i>t</i>)</li>
+<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#getTabModelDataByUID-method">getTabModelDataByUID</a></b></b>(<i>uid</i>)</li>
+<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#getTabModelIndexByUID-method">getTabModelIndexByUID</a></b></b>(<i>uid</i>)</li>
+<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#getUIDByModelIndex-method">getUIDByModelIndex</a></b></b>(<i>i</i>)</li>
+<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#removeTab-method">removeTab</a></b></b>(<i>t</i>)</li>
+<li class="fn"><b><b><a href="qml-quey-ui-tabview.html#setActiveTab-method">setActiveTab</a></b></b>(<i>t</i>, <i>ensureVisible</i>)</li>
 <li class="fn"><b><b><a href="qml-quey-ui-tabview.html#setLastActiveTabActive-method">setLastActiveTabActive</a></b></b>()</li>
 </ul>
 <!-- $$$TabView-description -->
@@ -124,69 +124,165 @@ import quey.ui 0.1
 <!-- @@@TabView -->
 <h2>Property Documentation</h2>
 <!-- $$$actions -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="actions-prop"><td class="tblQmlPropNode"><p><a name="actions-prop"></a><span class="name">actions</span> : <span class="type"><a href="qml-quey-ui-action.html">Action</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>A list of actions to be displayed next to the tab bar.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="actions-prop">
+<td class="tblQmlPropNode"><p>
+<a name="actions-prop"></a><span class="name">actions</span> : <span class="type"><a href="qml-quey-ui-action.html">Action</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>A list of actions to be displayed next to the tab bar.</p>
 </div></div><!-- @@@actions -->
 <br/>
 <!-- $$$activeTab -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="activeTab-prop"><td class="tblQmlPropNode"><p><a name="activeTab-prop"></a><span class="name">activeTab</span> : <span class="type">var</span></p></td></tr></table></div></div><div class="qmldoc"><p>Holds the current tab.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="activeTab-prop">
+<td class="tblQmlPropNode"><p>
+<a name="activeTab-prop"></a><span class="name">activeTab</span> : <span class="type">var</span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Holds the current tab.</p>
 </div></div><!-- @@@activeTab -->
 <br/>
 <!-- $$$activeTabHistory -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="activeTabHistory-prop"><td class="tblQmlPropNode"><p><a name="activeTabHistory-prop"></a><span class="name">activeTabHistory</span> : <span class="type">var</span></p></td></tr></table></div></div><div class="qmldoc"><p>A list of tabs ordered by their activation time.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="activeTabHistory-prop">
+<td class="tblQmlPropNode"><p>
+<a name="activeTabHistory-prop"></a><span class="name">activeTabHistory</span> : <span class="type">var</span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>A list of tabs ordered by their activation time.</p>
 </div></div><!-- @@@activeTabHistory -->
 <br/>
 <!-- $$$lastActiveTab -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="lastActiveTab-prop"><td class="tblQmlPropNode"><p><a name="lastActiveTab-prop"></a><span class="name">lastActiveTab</span> : <span class="type">var</span></p></td></tr></table></div></div><div class="qmldoc"><p>Holds the last active tab.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="lastActiveTab-prop">
+<td class="tblQmlPropNode"><p>
+<a name="lastActiveTab-prop"></a><span class="name">lastActiveTab</span> : <span class="type">var</span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Holds the last active tab.</p>
 </div></div><!-- @@@lastActiveTab -->
 <br/>
 <!-- $$$lastTabUID -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="lastTabUID-prop"><td class="tblQmlPropNode"><p><a name="lastTabUID-prop"></a><span class="name">lastTabUID</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"><p>The last internally used tab id.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="lastTabUID-prop">
+<td class="tblQmlPropNode"><p>
+<a name="lastTabUID-prop"></a><span class="name">lastTabUID</span> : <span class="type">int</span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>The last internally used tab id.</p>
 </div></div><!-- @@@lastTabUID -->
 <br/>
 <!-- $$$menu -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="menu-prop"><td class="tblQmlPropNode"><p><a name="menu-prop"></a><span class="name">menu</span> : <span class="type"><a href="qml-quey-ui-menu.html">Menu</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>An attached <a href="qml-quey-ui-menu.html">Menu</a>.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="menu-prop">
+<td class="tblQmlPropNode"><p>
+<a name="menu-prop"></a><span class="name">menu</span> : <span class="type"><a href="qml-quey-ui-menu.html">Menu</a></span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>An attached <a href="qml-quey-ui-menu.html">Menu</a>.</p>
 </div></div><!-- @@@menu -->
 <br/>
 <!-- $$$tabsModel -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="tabsModel-prop"><td class="tblQmlPropNode"><p><a name="tabsModel-prop"></a><span class="name">tabsModel</span> : <span class="type">ListModel</span></p></td></tr></table></div></div><div class="qmldoc"><p>A model of tabs. Used internally.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="tabsModel-prop">
+<td class="tblQmlPropNode"><p>
+<a name="tabsModel-prop"></a><span class="name">tabsModel</span> : <span class="type">ListModel</span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>A model of tabs. Used internally.</p>
 </div></div><!-- @@@tabsModel -->
 <br/>
 <h2>Signal Documentation</h2>
 <!-- $$$lastTabClosed -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="lastTabClosed-signal"><td class="tblQmlFuncNode"><p><a name="lastTabClosed-signal"></a><span class="name">lastTabClosed</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Emitted if the last tab was closed.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="lastTabClosed-signal">
+<td class="tblQmlFuncNode"><p>
+<a name="lastTabClosed-signal"></a><span class="name">lastTabClosed</span>()</p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Emitted if the last tab was closed.</p>
 </div></div><!-- @@@lastTabClosed -->
 <br/>
 <h2>Method Documentation</h2>
 <!-- $$$addTab -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="addTab-method"><td class="tblQmlFuncNode"><p><a name="addTab-method"></a><span class="name">addTab</span>(<i> view</i>, <i> background</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Add a tab to the view.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="addTab-method">
+<td class="tblQmlFuncNode"><p>
+<a name="addTab-method"></a><span class="name">addTab</span>(<i>view</i>, <i>background</i>)</p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Add a tab to the view.</p>
 </div></div><!-- @@@addTab -->
 <br/>
 <!-- $$$ensureTabIsVisible -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="ensureTabIsVisible-method"><td class="tblQmlFuncNode"><p><a name="ensureTabIsVisible-method"></a><span class="name">ensureTabIsVisible</span>(<i> t</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Ensure a tab is visible.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="ensureTabIsVisible-method">
+<td class="tblQmlFuncNode"><p>
+<a name="ensureTabIsVisible-method"></a><span class="name">ensureTabIsVisible</span>(<i>t</i>)</p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Ensure a tab is visible.</p>
 </div></div><!-- @@@ensureTabIsVisible -->
 <br/>
 <!-- $$$getTabModelDataByUID -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="getTabModelDataByUID-method"><td class="tblQmlFuncNode"><p><a name="getTabModelDataByUID-method"></a><span class="name">getTabModelDataByUID</span>(<i> uid</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Return the model data based on a tab id. Used internally.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="getTabModelDataByUID-method">
+<td class="tblQmlFuncNode"><p>
+<a name="getTabModelDataByUID-method"></a><span class="name">getTabModelDataByUID</span>(<i>uid</i>)</p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Return the model data based on a tab id. Used internally.</p>
 </div></div><!-- @@@getTabModelDataByUID -->
 <br/>
 <!-- $$$getTabModelIndexByUID -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="getTabModelIndexByUID-method"><td class="tblQmlFuncNode"><p><a name="getTabModelIndexByUID-method"></a><span class="name">getTabModelIndexByUID</span>(<i> uid</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Return the model index based on a tab id. Used internally.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="getTabModelIndexByUID-method">
+<td class="tblQmlFuncNode"><p>
+<a name="getTabModelIndexByUID-method"></a><span class="name">getTabModelIndexByUID</span>(<i>uid</i>)</p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Return the model index based on a tab id. Used internally.</p>
 </div></div><!-- @@@getTabModelIndexByUID -->
 <br/>
 <!-- $$$getUIDByModelIndex -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="getUIDByModelIndex-method"><td class="tblQmlFuncNode"><p><a name="getUIDByModelIndex-method"></a><span class="name">getUIDByModelIndex</span>(<i> i</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Return the tab id based on the model index. Used internally.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="getUIDByModelIndex-method">
+<td class="tblQmlFuncNode"><p>
+<a name="getUIDByModelIndex-method"></a><span class="name">getUIDByModelIndex</span>(<i>i</i>)</p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Return the tab id based on the model index. Used internally.</p>
 </div></div><!-- @@@getUIDByModelIndex -->
 <br/>
 <!-- $$$removeTab -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="removeTab-method"><td class="tblQmlFuncNode"><p><a name="removeTab-method"></a><span class="name">removeTab</span>(<i> t</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Remove a tab from the view.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="removeTab-method">
+<td class="tblQmlFuncNode"><p>
+<a name="removeTab-method"></a><span class="name">removeTab</span>(<i>t</i>)</p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Remove a tab from the view.</p>
 </div></div><!-- @@@removeTab -->
 <br/>
 <!-- $$$setActiveTab -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="setActiveTab-method"><td class="tblQmlFuncNode"><p><a name="setActiveTab-method"></a><span class="name">setActiveTab</span>(<i> t</i>, <i> ensureVisible</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>Set the active tab.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="setActiveTab-method">
+<td class="tblQmlFuncNode"><p>
+<a name="setActiveTab-method"></a><span class="name">setActiveTab</span>(<i>t</i>, <i>ensureVisible</i>)</p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Set the active tab.</p>
 </div></div><!-- @@@setActiveTab -->
 <br/>
 <!-- $$$setLastActiveTabActive -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="setLastActiveTabActive-method"><td class="tblQmlFuncNode"><p><a name="setLastActiveTabActive-method"></a><span class="name">setLastActiveTabActive</span>()</p></td></tr></table></div></div><div class="qmldoc"><p>Set the last active tab active.</p>
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="setLastActiveTabActive-method">
+<td class="tblQmlFuncNode"><p>
+<a name="setLastActiveTabActive-method"></a><span class="name">setLastActiveTabActive</span>()</p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Set the last active tab active.</p>
 </div></div><!-- @@@setLastActiveTabActive -->
 <br/>
 </body>
