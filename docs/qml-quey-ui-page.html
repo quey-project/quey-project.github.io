@@ -13,6 +13,8 @@
 <h3><a name="toc">Contents</a></h3>
 <ul>
 <li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -33,11 +35,25 @@
 <ul>
 <li class="fn"><b><b><a href="qml-quey-ui-page.html#actions-prop">actions</a></b></b> : Action</li>
 <li class="fn"><b><b><a href="qml-quey-ui-page.html#containers-prop">containers</a></b></b> : PageContainer</li>
+<li class="fn"><b><b><a href="qml-quey-ui-page.html#fixed-prop">fixed</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-quey-ui-page.html#hasMenu-prop">hasMenu</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-quey-ui-page.html#menu-prop">menu</a></b></b> : Menu</li>
 <li class="fn"><b><b><a href="qml-quey-ui-page.html#menuItems-prop">menuItems</a></b></b> : MenuItem</li>
+<li class="fn"><b><b><a href="qml-quey-ui-page.html#pageView-prop">pageView</a></b></b> : var</li>
 <li class="fn"><b><b><a href="qml-quey-ui-page.html#showHeader-prop">showHeader</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-quey-ui-page.html#title-prop">title</a></b></b> : string</li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-page.html#popped-signal">popped</a></b></b>(var <i>pageView</i>)</li>
+<li class="fn"><b><b><a href="qml-quey-ui-page.html#pushed-signal">pushed</a></b></b>(var <i>pageView</i>)</li>
+</ul>
+<a name="methods"></a>
+<h2 id="methods">Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-quey-ui-page.html#pop-method">pop</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-quey-ui-page.html#push-method">push</a></b></b>(<i>pageView</i>)</li>
 </ul>
 <!-- $$$Page-description -->
 <a name="details"></a>
@@ -64,6 +80,16 @@
 </table></div>
 </div><div class="qmldoc"><p>An list of <a href="qml-quey-ui-pagecontainer.html">PageContainer</a> items this page may be displayed in.</p>
 </div></div><!-- @@@containers -->
+<br/>
+<!-- $$$fixed -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="fixed-prop">
+<td class="tblQmlPropNode"><p>
+<a name="fixed-prop"></a><span class="name">fixed</span> : <span class="type">bool</span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>When set to <code>true</code> the page can't be popped from the view using the &quot;back button&quot;.</p>
+</div></div><!-- @@@fixed -->
 <br/>
 <!-- $$$hasMenu -->
 <div class="qmlitem"><div class="qmlproto">
@@ -95,6 +121,16 @@
 </div><div class="qmldoc"><p>A list of <a href="qml-quey-ui-menuitem.html">MenuItem</a>.</p>
 </div></div><!-- @@@menuItems -->
 <br/>
+<!-- $$$pageView -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="pageView-prop">
+<td class="tblQmlPropNode"><p>
+<a name="pageView-prop"></a><span class="name">pageView</span> : <span class="type">var</span></p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>If the page is currently present in a <a href="qml-quey-ui-pageview.html">PageView</a> this property holds a reference to it. Otherwise it is <code>undefined</code>.</p>
+</div></div><!-- @@@pageView -->
+<br/>
 <!-- $$$showHeader -->
 <div class="qmlitem"><div class="qmlproto">
 <div class="table"><table class="qmlname">
@@ -114,6 +150,48 @@
 </table></div>
 </div><div class="qmldoc"><p>The title to be displayed in the page header.</p>
 </div></div><!-- @@@title -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$popped -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="popped-signal">
+<td class="tblQmlFuncNode"><p>
+<a name="popped-signal"></a><span class="name">popped</span>(<span class="type">var</span> <i>pageView</i>)</p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Emitted when page is popped from a <a href="qml-quey-ui-pageview.html">PageView</a>.</p>
+</div></div><!-- @@@popped -->
+<br/>
+<!-- $$$pushed -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="pushed-signal">
+<td class="tblQmlFuncNode"><p>
+<a name="pushed-signal"></a><span class="name">pushed</span>(<span class="type">var</span> <i>pageView</i>)</p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Emitted when page is pushed to a <a href="qml-quey-ui-pageview.html">PageView</a>.</p>
+</div></div><!-- @@@pushed -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$pop -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="pop-method">
+<td class="tblQmlFuncNode"><p>
+<a name="pop-method"></a><span class="name">pop</span>()</p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Pop the page from the current <a href="qml-quey-ui-pageview.html">PageView</a> if any.</p>
+</div></div><!-- @@@pop -->
+<br/>
+<!-- $$$push -->
+<div class="qmlitem"><div class="qmlproto">
+<div class="table"><table class="qmlname">
+<tr valign="top" class="odd" id="push-method">
+<td class="tblQmlFuncNode"><p>
+<a name="push-method"></a><span class="name">push</span>(<i>pageView</i>)</p></td></tr>
+</table></div>
+</div><div class="qmldoc"><p>Push this page to a <a href="qml-quey-ui-pageview.html">PageView</a>.</p>
+</div></div><!-- @@@push -->
 <br/>
 </body>
 </html>
